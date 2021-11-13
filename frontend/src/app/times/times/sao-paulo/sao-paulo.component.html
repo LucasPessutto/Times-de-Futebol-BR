@@ -1,0 +1,88 @@
+<mat-toolbar
+  color="warn"
+  class="container mat-elevation-z4"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+>
+  <div>
+    <img
+      class="imgSP"
+      src="../../../assets/img/spfc.png"
+      alt="Escudo do São Paulo"
+    />
+  </div>
+  <div>
+    <h1>São Paulo FC</h1>
+  </div>
+  <div>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>notifications</mat-icon>
+        <span>Notificações</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+<div
+  class="div-container"
+  fxLayout="column"
+  fxLayoutAlign="space-around center"
+  fxLayoutGap="70px"
+>
+  <div>
+    <h1>Estádio do <strong class="morumbi">Morumbi</strong></h1>
+    <img
+      class="imgMorumbi"
+      src="../../../assets/img/morumbi.jpeg"
+      alt="Imagem do estádio do Morumbi"
+    />
+  </div>
+  <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="70px">
+    <div class="div-container-row">
+      <h1 class="titulo">DENTRE OS GRANDES ÉS O PRIMEIRO!</h1>
+    </div>
+    <div class="div-container-row">
+      <h2>História do Tricolor</h2>
+      <p>
+        São Paulo Futebol Clube. O tricolor paulista surgiu através da fusão de
+        dois antigos clubes: o Paulistano, grande campeão no início do século XX
+        e a Associação Atlética das Palmeiras, que se uniram em 1930 dando
+        origem ao Clube Athlético São Paulo ou São Paulo da Floresta, como
+        muitos o chamavam. No seu segundo ano de existência, o clube se
+        consagrou campeão paulista. O São Paulo já era um gigante do futebol
+        local, só que nem mesmo o clube imaginava onde iria chegar. Em 1935, o
+        clube teve uma nova refundação. Isso ocorreu devido a uma crise política
+        dentro da instituição. Alguns dirigentes não estavam contentes com a
+        situação do futebol no país, tomando a atitude de sair do futebol e se
+        unir com o Clube Regatas Tietê. Só que o futebol no tricolor resistiu, e
+        em 4 de junho de 1935 alguns sócios refundaram o que foi chamado de
+        Clube Atlético São Paulo, tornando-se posteriormente o grande São Paulo
+        Futebol Clube. Surge então um gigante no futebol, com a tradição de
+        colecionar títulos. É, essa camisa pesa, amigos, e como diz o próprio
+        hino: "Dentre os grandes és o primeiro!"
+      </p>
+    </div>
+  </div>
+</div>
+
+<mat-toolbar
+  color="warn"
+  fxLayout="row"
+  fxLayoutAlign="space-around center"
+  class="footer mat-elevation-z4"
+>
+  <span>Criado por <strong>Lucas Pessutto</strong></span>
+  <span>Instagram <strong>@lucas.pessutto</strong></span>
+</mat-toolbar>

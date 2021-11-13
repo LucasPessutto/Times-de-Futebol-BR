@@ -1,0 +1,59 @@
+.container {
+  padding: 2%;
+  background: lightgray;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.example-card {
+  text-align: center;
+  width: 200px;
+  height: 300px;
+}
+
+mat-card-header {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.imgSP {
+  width: 100px;
+}
+
+.imgCor {
+  width: 115px;
+}
+
+.imgPal {
+  width: 140px;
+}
+
+.imgSan {
+  width: 125px;
+}
+
+.imgFla {
+  width: 118px;
+}
+
+.imgVas {
+  width: 115px;
+}
+
+.imgFlu {
+  width: 122px;
+}
+
+.imgBot {
+  width: 137px;
+}

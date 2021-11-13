@@ -1,0 +1,132 @@
+<app-header></app-header>
+<div class="container">
+  <h1>Faça seu cadastro</h1>
+  <img
+    class="detalhe1"
+    src="../../../assets/img/detalhe1.png"
+    alt="detalhe de imagem do site"
+  />
+  <img
+    class="detalhe2"
+    src="../../../assets/img/detalhe2.png"
+    alt="detalhe de imagem do site"
+  />
+  <form
+    fxLayout="column"
+    fxLayoutAlign="space-around center"
+    [formGroup]="novoUsuarioForm"
+    (ngSubmit)="cadastro()"
+  >
+    <mat-form-field>
+      <mat-label> Nome Completo </mat-label>
+      <input
+        name="fullName"
+        type="text"
+        matInput
+        placeholder=" Digite seu nome completo"
+        formControlName="fullName"
+      />
+      <mat-error
+        *ngIf="
+          novoUsuarioForm.get('fullName')?.errors?.required &&
+          novoUsuarioForm.get('fullName')?.touched
+        "
+      >
+        O nome é obrigatório
+      </mat-error>
+      <mat-error *ngIf="novoUsuarioForm.controls.fullName.errors?.minlength">
+        O nome precisa ter no minímo 3 caracteres
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Nome do Usuário </mat-label>
+      <input
+        name="userName"
+        type="text"
+        matInput
+        placeholder="Digite o nome do usuário"
+        formControlName="userName"
+      />
+      <mat-error
+        *ngIf="
+          novoUsuarioForm.get('userName')?.errors?.required &&
+          novoUsuarioForm.get('userName')?.touched
+        "
+      >
+        O nome do usuário é obrigatório
+      </mat-error>
+      <mat-error *ngIf="novoUsuarioForm.controls.userName.errors?.minlength">
+        O nome do usuário precisa ter no minímo 3 caracteres
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Email </mat-label>
+      <input
+        name="email"
+        type="email"
+        matInput
+        placeholder="Digite o seu email"
+        formControlName="email"
+      />
+      <mat-error
+        *ngIf="
+          novoUsuarioForm.get('email')?.errors?.required &&
+          novoUsuarioForm.get('email')?.touched
+        "
+      >
+        O email é obrigatório
+      </mat-error>
+      <mat-error *ngIf="novoUsuarioForm.controls.email.errors?.email">
+        O email precisa ser um email válido
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Senha </mat-label>
+      <input
+        name="password"
+        type="password"
+        matInput
+        placeholder="Digite a sua senha"
+        formControlName="password"
+      />
+      <mat-error
+        *ngIf="
+          novoUsuarioForm.get('password')?.errors?.required &&
+          novoUsuarioForm.get('password')?.touched
+        "
+      >
+        A senha é obrigatória
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Confirmação de senha </mat-label>
+      <input
+        type="password"
+        matInput
+        placeholder="Confirme a sua senha"
+        formControlName="passwordConfirmed"
+      />
+      <mat-error
+        *ngIf="
+          novoUsuarioForm.get('passwordConfirmed')?.errors?.required &&
+          novoUsuarioForm.get('passwordConfirmed')?.touched
+        "
+      >
+        A confirmação da senha é obrigatória
+      </mat-error>
+      <mat-error *ngIf="novoUsuarioForm.errors?.senhasIguais">
+        As senhas precisam ser iguais
+      </mat-error>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="novoUsuarioForm.invalid"
+    >
+      Cadastro
+    </button>
+    <p>Já é usuário? <a [routerLink]="['']">Faça login</a></p>
+  </form>
+</div>
+<app-footer style="position: absolute; bottom: 0px; width: 100%"></app-footer>

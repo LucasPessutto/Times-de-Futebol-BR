@@ -1,0 +1,49 @@
+mat-form-field {
+  text-align: center;
+  width: 300px;
+}
+
+.container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+}
+
+p {
+  margin-top: 10px;
+}
+
+.detalhe1 {
+  width: 400px;
+  position: absolute;
+  left: 50px;
+}
+
+.detalhe2 {
+  width: 300px;
+  position: absolute;
+  right: 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .detalhe1 {
+    width: 200px;
+  }
+
+  .detalhe2 {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .detalhe1 {
+    display: none;
+  }
+
+  .detalhe2 {
+    display: none;
+  }
+}

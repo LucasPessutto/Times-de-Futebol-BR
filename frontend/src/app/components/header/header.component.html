@@ -1,0 +1,32 @@
+<mat-toolbar
+  color="primary"
+  class="mat-elevation-z4"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+>
+  <div>
+    <img class="logo" src="../../../assets/img/logo.png" alt="logo do site" />
+  </div>
+  <div>
+    <h1>Times de Futebol no <strong>Brasil</strong></h1>
+  </div>
+  <div>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>notifications</mat-icon>
+        <span>Notificações</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

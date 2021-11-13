@@ -1,0 +1,50 @@
+.container {
+  height: 100px;
+}
+
+.imgSP {
+  width: 60px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: #4e4b4b 2px 2px;
+}
+
+.morumbi {
+  color: #d31414;
+}
+
+.imgMorumbi {
+  width: 500px;
+  border-radius: 15px;
+  box-shadow: #4e4b4b 3px 3px;
+}
+
+.div-container {
+  padding: 2%;
+  background-color: lightgray;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d31414;
+}
+
+.div-container-row {
+  height: 400px;
+  width: 600px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5%;
+  box-shadow: #4e4b4b 3px 3px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0 auto;
+  color: #000;
+}

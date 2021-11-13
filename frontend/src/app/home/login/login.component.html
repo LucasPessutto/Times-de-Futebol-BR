@@ -1,0 +1,68 @@
+<app-header></app-header>
+<div class="container">
+  <h1>Faça o Login</h1>
+  <img
+    class="detalhe1"
+    src="../../../assets/img/detalhe1.png"
+    alt="detalhe de imagem do site"
+  />
+  <img
+    class="detalhe2"
+    src="../../../assets/img/detalhe2.png"
+    alt="detalhe de imagem do site"
+  />
+  <form
+    fxLayout="column"
+    fxLayoutAlign="space-around center"
+    [formGroup]="loginForm"
+    (ngSubmit)="login()"
+  >
+    <mat-form-field>
+      <mat-label> Email </mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Digite seu email"
+        formControlName="email"
+      />
+      <mat-error
+        *ngIf="
+          loginForm.get('email')?.errors?.required &&
+          loginForm.get('email')?.touched
+        "
+      >
+        O Email é obrigatório
+      </mat-error>
+      <mat-error *ngIf="loginForm.controls.email.errors?.email">
+        O email precisa ser um email válido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label> Senha </mat-label>
+      <input
+        type="password"
+        matInput
+        placeholder="Digite sua senha"
+        formControlName="password"
+      />
+      <mat-error
+        *ngIf="
+          loginForm.get('password')?.errors?.required &&
+          loginForm.get('password')?.touched
+        "
+      >
+        A senha é obrigatória
+      </mat-error>
+      <mat-error *ngIf="loginForm.controls.password.errors?.minlength">
+        A senha precisa ter no minímo 3 caracteres
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="loginForm.invalid">
+      Login
+    </button>
+    <p>Não é um usuário? <a [routerLink]="['novousuario']">Se cadastre</a></p>
+  </form>
+</div>
+<app-footer style="position: absolute; bottom: 0px; width: 100%"></app-footer>
